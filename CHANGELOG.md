@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/iamlasantha/LipiFlow/compare/v1.0.0...v1.1.0) (2026-03-25)
+
+
+### Features
+
+* **engine:** implement transliteration logic, engine, and react hook ([db1bb6a](https://github.com/iamlasantha/LipiFlow/commit/db1bb6ac091164c7abd14ceefc4bbc7a99ef3527))
+* **engine:** implement transliteration logic, engine, and react hook ([9dd706c](https://github.com/iamlasantha/LipiFlow/commit/9dd706c0b58a1716bde4c1e71a5c856032c3064a))
+
 ## 1.0.0 (2026-03-23)
 
 
