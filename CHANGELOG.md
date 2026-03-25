@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.0](https://github.com/iamlasantha/LipiFlow/compare/v1.2.0...v1.3.0) (2026-03-25)
+
+
+### Features
+
+* **engine:** implement fallback wijesekara secondary mapping mode ([c859c6c](https://github.com/iamlasantha/LipiFlow/commit/c859c6c90c53b849d28e1c82bbccfd273065aa23))
+* **pwa:** configure next-pwa for offline capabilities ([6faa8cd](https://github.com/iamlasantha/LipiFlow/commit/6faa8cd4e59a38f47801a7e292361fe9c49c2476))
+* **store:** configure Zustand with LocalStorage persistence ([5d6b07f](https://github.com/iamlasantha/LipiFlow/commit/5d6b07f769afff8b9ec187f4e066d75a038f1a2c))
+* **ui:** implement settings and help guide pages ([e8f00b5](https://github.com/iamlasantha/LipiFlow/commit/e8f00b538462ee6d4ba6db18fea4ce5cf228e4ad))
+
 ## [1.2.0](https://github.com/iamlasantha/LipiFlow/compare/v1.1.0...v1.2.0) (2026-03-25)
 
 
