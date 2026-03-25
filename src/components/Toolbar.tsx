@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useStore } from '@/store/useStore';
 
 interface ToolbarProps {
   outputText: string;
@@ -9,6 +10,7 @@ interface ToolbarProps {
 
 export function Toolbar({ outputText, onClear }: ToolbarProps) {
   const [copied, setCopied] = useState(false);
+  const { keyboardLayout, setKeyboardLayout } = useStore();
 
   const handleCopy = async () => {
     if (!outputText) return;
@@ -37,11 +39,23 @@ export function Toolbar({ outputText, onClear }: ToolbarProps) {
       {/* Layout Toggle Mapping (Singlish / Wijesekara mapping selection) */}
       <div className="flex items-center gap-6">
         <label className="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-200 hover:text-indigo-400 transition-colors">
-          <input type="radio" defaultChecked name="layout" className="w-4 h-4 accent-indigo-500 border-slate-600 bg-slate-800" />
+          <input 
+            type="radio" 
+            name="layout" 
+            className="w-4 h-4 accent-indigo-500 border-slate-600 bg-slate-800" 
+            checked={keyboardLayout === 'singlish'}
+            onChange={() => setKeyboardLayout('singlish')}
+          />
           Singlish Phonetic
         </label>
-        <label className="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-500 hover:text-indigo-400 transition-colors" title="Coming soon">
-          <input type="radio" disabled name="layout" className="w-4 h-4 accent-indigo-500 border-slate-700 bg-slate-800 disabled:opacity-50" />
+        <label className="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-200 hover:text-indigo-400 transition-colors">
+          <input 
+            type="radio" 
+            name="layout" 
+            className="w-4 h-4 accent-indigo-500 border-slate-700 bg-slate-800" 
+            checked={keyboardLayout === 'wijesekara'}
+            onChange={() => setKeyboardLayout('wijesekara')}
+          />
           Wijesekara 
         </label>
       </div>
