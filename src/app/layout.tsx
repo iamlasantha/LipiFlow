@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.json', // We will build this in Phase 4
 };
 
+import { Header } from '@/components/Header';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="si" className="dark h-full">
       <body className={`${inter.className} min-h-screen bg-slate-950 text-slate-50 flex flex-col selection:bg-indigo-500/30`}>
-        {/* We will add our global Header here in the next step */}
+        <Header />
         <main className="flex-1 w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 flex flex-col">
           {children}
         </main>
